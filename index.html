@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>lolwtf</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="opening-section">
+	<div class="wrapper">
+		<h1>MAIN FORM, wrapping two distinct forms with generic crossover</h1>
+		<form id="main-form" class="contact-form" data-type="enquiry">
+
+			<input id="contact-type-enquiry" class="contact-type-enquiry-state contact-type-state" name="contact-type" type="radio" value="enquiry" checked>
+			<label for="contact-type-enquiry" class="contact-type-trigger btn" data-contact-trigger="enquiry">Enquiry</label>
+
+			<input id="contact-type-quote" class="contact-type-quote-state contact-type-state" name="contact-type" type="radio" value="quote">
+			<label for="contact-type-quote" class="contact-type-trigger btn" data-contact-trigger="quote">Quote</label>
+
+			<hr>
+
+			<div class="split-form-group form-group">
+				<label class="form-label" for="form-name">Name</label>
+				<input name="form-name" id="form-name" class="form-input" type="text">
+				<span id="hint-form-name" class="hint">Please enter your name</span>
+			</div>
+
+			<div class="split-form-group form-group">
+				<label class="form-label" for="form-business">Business</label>
+				<input name="form-business" id="form-business" class="form-input" type="text">
+			</div>
+
+			<div class="split-form-group form-group">
+				<label class="form-label" for="form-email">Email</label>
+				<input name="form-email" id="form-email" class="form-input" type="email">
+				<span id="hint-form-email" class="hint">Please enter a valid email address</span>
+			</div>
+
+			<div class="split-form-group form-group">
+				<label class="form-label" for="form-telephone">Telephone</label>
+				<input name="form-telephone" id="form-telephone" class="form-input" type="tel">
+				<span id="hint-form-telephone" class="hint">Please enter a valid telephone number</span>
+			</div>
+
+			<div class="form-group" data-form-group="enquiry">
+				<label class="form-label" for="form-message">Message</label>
+				<textarea name="form-message" id="form-message" class="form-textarea form-input"></textarea>
+				<span id="hint-form-message" class="hint">Please make your message at least 10 characters</span>
+			</div>
+
+			<div class="full-width-form-group form-group" data-form-group="quote">
+				<label class="form-label" for="form-competitor">Who is your main competitor?</label>
+				<input name="form-competitor" id="form-competitor" class="form-input" type="text">
+			</div>
+
+			<div class="form-group-boxes" data-form-group="quote">
+
+				<div id="form-box-website" class="form-group-box">
+					<p class="form-question">Do you already have a website?</p>
+
+					<div class="form-group-box-btns">
+						<label for="website-yes" class="btn">Yes</label>
+						<label for="website-no" class="btn">No</label>
+						<input id="website-yes" name="website" type="radio" value="yes">
+						<input id="website-no" name="website" type="radio" value="no">
+					</div>
+
+					<span id="hint-website" class="hint">Please select an option</span>
+
+					<div class="response-group form-group">
+						<label class="form-label" for="form-url">Website URL</label>
+						<input name="form-url" id="form-url" class="form-input" type="text">
+					</div>
+				</div>
+
+				<div id="form-box-branding" class="form-group-box">
+					<p class="form-question">Do you require company branding?</p>
+
+					<div class="form-group-box-btns">
+						<label for="branding-yes" class="btn">Yes</label>
+						<label for="branding-no" class="btn">No</label>
+						<input id="branding-yes" name="branding" type="radio" value="yes">
+						<input id="branding-no" name="branding" type="radio" value="no">
+					</div>
+
+					<span id="hint-branding" class="hint">Please select an option</span>
+				</div>
+
+				<div id="form-box-launch" class="form-group-box">
+					<p class="form-question">Do you have a launch date in mind?</p>
+
+					<div class="form-group-box-btns">
+						<label for="launch-yes" class="btn">Yes</label>
+						<label for="launch-no" class="btn">No</label>
+						<input id="launch-yes" name="launch" type="radio" value="yes">
+						<input id="launch-no" name="launch" type="radio" value="no">
+					</div>
+
+					<span id="hint-launch" class="hint">Please select an option</span>
+
+					<div class="response-group form-group">
+						<label class="form-label" for="form-launch">Desired launch date</label>
+						<input name="form-launch" id="form-launch" class="form-input" type="text">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group" data-form-group="quote">
+				<label class="form-label" for="form-summary">Please give a summary of your business and expectations for the project</label>
+				<textarea name="form-summary" id="form-summary" class="form-textarea form-input"></textarea>
+				<span id="hint-form-summary" class="hint">Please make your message at least 10 characters</span>
+			</div>
+
+			<input class="submit-btn btn" type="submit" value="Submit">
+
+		</form>
+
+		<hr/><hr/><hr/>
+		<h1>SINGLE FORM, a normal use case</h1>
+
+		<form id="single-form" class="other-form">
+			<div class="form-group">
+				<label class="form-label" for="other-name">Name</label>
+				<input name="other-name" id="other-name" class="form-input" type="text">
+				<span id="hint-other-name" class="hint">Please enter your name</span>
+			</div>
+
+			<input class="submit-btn btn" type="submit" value="submit">
+		</form>
+	</div>
+</section>
+	
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+
+	<script src="./lib/regexes.js"></script>
+	<script src="./lib/processingerror.js"></script>
+	<script src="./lib/formprocessor.js"></script>
+	
+	<script src="./main.js"></script>
+</body>
+</html>
